@@ -11,6 +11,12 @@
 
 @interface Quote : NSObject
 
+@property (strong, nonatomic) NSString *body;
+@property (strong, nonatomic) NSString *author;
+@property (strong, nonatomic) NSString *source;
+
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
+
 - (void)getQuote:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success;
 
 @end

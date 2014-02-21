@@ -13,6 +13,19 @@ static NSString * const RandomQuotesAPIBaseURLString = @"http://random-quotes.he
 
 @implementation Quote
 
+- (instancetype)initWithAttributes:(NSDictionary *)attributes {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    self.body = [attributes valueForKeyPath:@"body"];
+    self.author = [attributes valueForKeyPath:@"author"];
+    self.source = [attributes valueForKeyPath:@"source"];
+
+    return self;
+}
+
 - (void)getQuote:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
 {
     SHOW_NETWORK_INDICATOR
