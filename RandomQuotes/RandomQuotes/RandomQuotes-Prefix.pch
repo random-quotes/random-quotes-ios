@@ -14,3 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define SHOW_NETWORK_INDICATOR [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+#define HIDE_NETWORK_INDICATOR [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
