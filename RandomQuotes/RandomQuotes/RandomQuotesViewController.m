@@ -43,7 +43,7 @@
 
     [quote getQuote:^(AFHTTPRequestOperation *operation, id responseObject) {
         HIDE_NETWORK_INDICATOR
-        self.quoteSting = [NSString stringWithFormat:@"%@ ― %@ %@",
+        self.quoteSting = [NSString stringWithFormat:@"“%@” ― %@ %@",
                            responseObject[@"body"],
                            responseObject[@"author"],
                            responseObject[@"source"]];
